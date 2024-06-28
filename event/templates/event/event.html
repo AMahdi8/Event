@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>{{event.name}}</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if event.is_past%}
+    <div
+        style="background-color: greenyellow; padding: 0.625rem; border-radius: 1rem; font-size: 1.2rem; display: inline-block;margin: 1rem; width: 18%;">
+        <span style="color: rgb(74, 72, 72);">name: </span>
+        <span href={{url}}{{event.id}}>{{event.name}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">date: </span>
+        <span>{{event.date}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">location: </span>
+        <span>{{event.location}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">description: </span>
+        <span>{{event.description}}</span>
+    </div>
+    {% else %}
+    <div
+        style="background-color: rgb(249, 93, 93); padding: 0.625rem; border-radius: 1rem; font-size: 1.2rem;display: inline-block;margin: 1rem; width: 18%;">
+        <span style="color: rgb(74, 72, 72);">name: </span>
+        <span href={{url}}{{event.id}}>{{event.name}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">date: </span>
+        <span>{{event.date}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">location: </span>
+        <span>{{event.location}}</span>
+        <p></p>
+        <span style="color: rgb(74, 72, 72);">description: </span>
+        <span>{{event.description}}</span>
+    </div>
+    {% endif %}
+</body>
+
+</html>
